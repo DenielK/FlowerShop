@@ -1,0 +1,525 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Более современный шрифт */
+    background-color: #1a1a1a; /* Очень темный фон */
+    background-image: url('flowers3.jpg'); /* Убедитесь, что путь к изображению верный */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Фон не скроллится со страницей */
+    color: #e0e0e0; /* Светло-серый текст для лучшей читаемости */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Улучшает читаемость длинных текстов */
+}
+
+h1, h2 {
+    color: black; /* Почти белый для заголовков, чтобы они выделялись на фоне */
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 600; /* Немного жирнее */
+}
+h3 {
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.8em; /* Крупнее заголовок */
+    letter-spacing: 1.5px; /* Небольшой межбуквенный интервал */
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #5a5a5a; /* Деликатная линия под заголовком */
+    padding-bottom: 10px;
+    display: inline-block; /* Чтобы линия была только под текстом */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Центрируем, если не строчный элемент */
+}
+
+/* Form Styles */
+form {
+    margin: 30px auto;
+    padding: 30px;
+    background-color: rgba(45, 45, 45, 0.9); /* Полупрозрачный темный фон для формы */
+    border-radius: 12px; /* Более округлые углы */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); /* Более выраженная, но мягкая тень */
+    width: 90%;
+    max-width: 650px; /* Немного шире */
+    box-sizing: border-box; /* Важно для padding/width */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #c0c0c0; /* Более светлый цвет для подписей */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"], /* Добавил для tellimus_tukk */
+input[type="datetime-local"], /* Добавил для tellimus_kuupaev */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #666; /* Мягкие границы */
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #3a3a3a; /* Темнее фон для полей ввода */
+    color: #e0e0e0; /* Светлый текст */
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="datetime-local"]:focus,
+select:focus {
+    border-color: #61dafb; /* Цвет при фокусе */
+    box-shadow: 0 0 8px rgba(97, 218, 251, 0.4); /* Мягкая тень при фокусе */
+    outline: none; /* Убрать стандартное синее обрамление */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Яркий синий для кнопок действий */
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: peachpuff; /* Темнее синий при наведении */
+    transform: translateY(-2px); /* Небольшой эффект поднятия */
+}
+
+
+
+
+a {
+    color: black; /* Свежий синий для ссылок */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: peachpuff;
+    text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+    width: 95%; /* Шире таблица */
+    border-collapse: separate; /* Для border-radius на углах */
+    border-spacing: 0; /* Убирает пробелы между ячейками */
+    margin: 30px auto;
+    background-color: #3a3a3a; /* Темный фон для таблицы */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    overflow: hidden; /* Важно для скругленных углов */
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #5a5a5a; /* Более мягкие линии */
+    color: #e0e0e0;
+}
+
+th {
+    background-color: #007bff; /* Тот же синий, что и для кнопок */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Заголовки таблицы заглавными буквами */
+    letter-spacing: 0.5px;
+}
+
+/* Для скругления углов таблицы */
+th:first-child { border-top-left-radius: 12px; }
+th:last-child { border-top-right-radius: 12px; }
+tr:last-child td:first-child { border-bottom-left-radius: 12px; }
+tr:last-child td:last-child { border-bottom-right-radius: 12px; }
+tr:last-child td { border-bottom: none; } /* Убираем нижнюю границу у последней строки */
+
+
+tr:hover {
+    background-color: #4a4a4a; /* Более заметный темный цвет при наведении */
+    transition: background-color 0.2s ease;
+}
+
+td a {
+    margin-right: 15px; /* Больше отступ */
+    color: #61dafb; /* Синий для ссылок в таблице */
+}
+
+/* Message Styles (Error/Success) */
+.success-message, .error-message {
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.success-message {
+    background-color: #28a745; /* Зеленый фон */
+    color: white;
+    border: 1px solid #218838;
+}
+
+.error-message {
+    background-color: #dc3545; /* Красный фон */
+    color: white;
+    border: 1px solid #c82333;
+}
+
+/* Common Paragraph Style */
+p {
+    text-align: center;
+    font-weight: normal; /* Обычный вес */
+    color: #c0c0c0; /* Деликатный цвет */
+    margin: 15px 0;
+}
+
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1); /* Немного увеличить чекбоксы */
+}
+
+/* Footer Style */
+footer {
+    text-align: center;
+    margin-top: 50px; /* Больше отступ сверху */
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.95); /* Чуть темнее и плотнее фон */
+    color: #c0c0c0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #222; /* Темнее навигация */
+    color: white;
+    padding: 15px 0; /* Больше padding */
+    width: 100%;
+    margin-bottom: 35px; /* Больше отступ под панелью */
+    box-shadow: 0 3px 12px rgba(0,0,0,0.3); /* Более заметная тень */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px; /* Больше padding по бокам */
+}
+
+.nav-brand {
+    color: white; /* Яркий цвет для бренда */
+    text-decoration: none;
+    font-size: 1.8em; /* Крупнее */
+    font-weight: 700; /* Очень жирный */
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-brand:hover {
+    color: peachpuff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 35px; /* Больше расстояние между пунктами */
+}
+
+nav ul li a {
+    color: #c0c0c0; /* Мягкий цвет для ссылок */
+    text-decoration: none;
+    font-size: 1.15em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ffb6c1; /* Светло-розовый при наведении */
+    transform: translateY(-2px);
+}
+
+/* Подчеркивание для активной ссылки */
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Немного ниже */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Толще подчеркивание */
+    background-color: #ffb6c1;
+    border-radius: 2px;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.nav-user span {
+    margin-right: 20px;
+    color: #e0e0e0;
+}
+
+.nav-user a {
+    color: #ff8888; /* Более выразительный красный для Logout */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-user a:hover {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+/* BUTTONS */
+
+/* Общие стили для кнопок, чтобы они выглядели одинаково */
+.btn-base {
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 2px; /* Уменьшен отступ для кнопок внутри ячеек */
+    text-decoration: none; /* Убрать подчеркивание у <a>, если он используется как кнопка */
+    display: inline-block; /* Чтобы padding и margin работали как у кнопок */
+    text-align: center;
+    white-space: nowrap; /* Предотвращает перенос текста кнопки */
+}
+
+/* Стиль для красных кнопок */
+.red-button {
+    background-color: #dc3545; /* Красный цвет */
+}
+.red-button:hover {
+    background-color: #c82333;
+}
+
+/* Стиль для синих кнопок (Add, Save) */
+.blue-button {
+    background-color: #007bff; /* Пример синего цвета */
+}
+.blue-button:hover {
+    background-color: #0056b3;
+}
+
+/* Стиль для зеленых кнопок (Edit) */
+.green-button {
+    background-color: #28a745; /* Зеленый цвет */
+}
+.green-button:hover {
+    background-color: #218838;
+}
+
+.red-button {
+    background-color: #dc3545; /* Красный цвет */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.red-button:hover {
+    background-color: #c82333;
+}
+/* Button for showEditForm (Edit Status/Date) */
+button[type="button"] {
+    background-color: #28a745; /* Зеленый для кнопки "Edit" */
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+    background-color: #218838;
+}
+
+/* Cancel button */
+#cancelbutton {
+    background-color: #dc3545; /* Красный для кнопки "Cancel" */
+    margin-left: 10px;
+}
+
+#cancelbutton:hover {
+    background-color: #c82333;
+}
+/* Дополнительный стиль для кнопок, чтобы они выглядели как "Add Order" */
+.add-order-submit-button {
+    background-color: #007bff; /* Пример синего цвета */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.add-order-submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Inline Editing Styles --- */
+/* Стиль для скрытых по умолчанию полей ввода в режиме inline-редактирования */
+.status-input, .date-input,
+.name-input, .price-input, .description-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    /* Уменьшим ширину, чтобы оставить место для кнопок, если они в той же ячейке */
+    width: calc(100% - 10px); /* 100% минус небольшой padding/margin */
+    box-sizing: border-box;
+    display: inline-block; /* Убедимся, что они ведут себя как inline-блоки */
+    margin: 2px 0; /* Небольшой вертикальный отступ */
+    text-align: center; /* Центрируем текст внутри поля ввода */
+    /* Эти элементы будут скрыты по умолчанию через JS, пока не активирован режим редактирования */
+}
+
+.status-input {
+    max-width: 120px; /* Установим максимальную ширину для селекта статуса */
+}
+.date-input {
+    max-width: 170px; /* Установим максимальную ширину для поля даты */
+}
+.name-input {
+    max-width: 150px; /* Для имени продукта */
+}
+.price-input {
+    max-width: 80px; /* Для цены продукта */
+}
+.description-input {
+    max-width: 200px; /* Для описания продукта */
+}
+/* --- End Inline Editing Styles --- */
+/* --- New: Center content in specific table cells --- */
+/* Выравнивание по центру содержимого в ячейках, где есть inline-редактирование и кнопки */
+table td:has(.status-display), /* Для ячеек со статусом */
+table td:has(.date-display),   /* Для ячеек с датой */
+table td:has(.name-display),   /* Для ячеек с названием товара */
+table td:has(.price-display),  /* Для ячеек с ценой товара */
+table td:has(.description-display), /* Для ячеек с описанием товара */
+table td:last-child {          /* Для ячейки с кнопками "Action" */
+    text-align: center; /* Горизонтальное выравнивание по центру */
+}
+/* --- End New: Center content in specific table cells --- */
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 15px;
+    }
+
+    .nav-brand {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px 0;
+        text-align: center;
+    }
+
+    .nav-user {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .nav-user span {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+        Color: #1a1a1a;
+    }
+    h2 {
+        font-size: 1.5em;
+
+    }
+    form {
+        padding: 15px;
+    }
+}
